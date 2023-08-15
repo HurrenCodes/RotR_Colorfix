@@ -1,0 +1,3 @@
+[submodule "vendor/stb_image_read_resize_write"]
+	path = vendor/stb_image_read_resize_write
+	url = https://github.com/HurrenCodes/stb_image_read_resize_write
