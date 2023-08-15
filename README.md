@@ -12,6 +12,8 @@ To use:
 
 * Drag your marking image onto the executable.
 
+* A terminal window will flash, this is the conversion running.
+
 * That's it! A converted file will appear next to the original.
 
 * To make it easier, you can create shortcuts to the executable, or even move it to your task bar if you wish - then just drag your file onto the icon or shortcut.
