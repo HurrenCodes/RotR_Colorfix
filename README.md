@@ -10,7 +10,7 @@ This will also convert *back*, so you can undo the color corrections you've alre
 
 To use:
 
-* Save the executable to some location.
+* Save [the executable](releases/tag/1.0.0-alpha/RotR_Colorfix.exe) to some location in your files.
 
 * Drag your marking image onto the executable.
 
