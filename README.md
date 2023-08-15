@@ -1,7 +1,5 @@
 # RotR Color Fixer
 
-WIP - executable coming soon!
-
 This is a tiny lightweight program which swaps color channels to be compatible with RotR color markings.
 
 Its aim is to allow you to work on your marking files in their correct color, then do a one-step use of this program just before you send your marking for upload.
