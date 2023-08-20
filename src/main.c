@@ -71,7 +71,12 @@ int main(int argc, char* argv[]) {
     }
 
     stbi_write_png_compression_level = 9; // Has no effect, helppp
-    stbi_write_png(output_path, width, height, channel_count, image, width * channel_count);
+    if(stbi_write_png(output_path, width, height, channel_count, image, width * channel_count) == 0) {
+        fprintf(stderr, "Unable to write %s: %s!\n", output_path, stbi_failure_reason());
+        free(output_path);
+        stbi_image_free(image);
+        RETURN_PAUSE(1);
+    }
 
     free(output_path);
     stbi_image_free(image);
