@@ -25,7 +25,7 @@ int main(int argc, char* argv[]) {
     if(access(input_path, F_OK) == -1) {
         fprintf(stderr, "Unable to open %s: %s!\n", input_path, strerror(errno));
         RETURN_PAUSE(1);
-    }
+    } // Might be unnecessary
 
     int width = 0;
     int height = 0;
@@ -47,7 +47,8 @@ int main(int argc, char* argv[]) {
     }
 
     char* output_append = "__Converted";
-    char* output_path = malloc((strlen(input_path) + strlen(output_append) + strlen(".png") + 1) * sizeof(char));
+    char* output_path = malloc((strlen(input_path) + strlen(output_append) + strlen(".png") + 1) * sizeof(*output_path));
+    // Let's not mess with MAX_PATH... if the OS complains about the filename, stbi_write_png will catch it.
     if(output_path == NULL) {
         fprintf(stderr, "Unable to allocate output_path memory!\n");
         stbi_image_free(image);
